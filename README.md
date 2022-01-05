@@ -3,8 +3,8 @@ This little applicaton demonstrates how we can integrate Golang programming lang
 
 ## Installation
 In order to execute this app, you have to have some prerequisites:
-* Go and install Tthe GO programming language at (https://go.dev/)
-* Install TinyGO: follow [this](https://tinygo.org/getting-started/install/) installation guide to get tinygo installed into your machine
+* Go and install Tthe GO programming language at https://go.dev
+* Install TinyGO: follow this [installation guide](https://tinygo.org/getting-started/install/) to get tinygo installed into your machine
 * Make sur to add the `C:\Program Files\Go\bin` and the `C:\tinygo\bin` to your PATH evironment variable
 
 ## Step 1: Copmile your GO file to WebAssembly
