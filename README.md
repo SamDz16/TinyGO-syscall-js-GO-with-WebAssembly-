@@ -1,5 +1,5 @@
 # TinyGo & WebAssembly with syscall/js
-This little applicaton demonstrates how we can integer Golang programming language to work along with WebAssembly. To example were made, the first one adds two numbers from user input, the second one capitalize a user input string. 
+This little applicaton demonstrates how we can integrate Golang programming language to work along with WebAssembly. To example were made, the first one adds two numbers from user input, the second one capitalize a user input string. 
 
 ## run
 The bellowed command is executed in order to compile the `main.go` to get the wasm equivalent `main.wasm` in the `assets` folder.
