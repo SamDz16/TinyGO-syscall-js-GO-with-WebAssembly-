@@ -3,7 +3,7 @@ This little applicaton demonstrates how we can integrate Golang programming lang
 
 ## Installation
 In order to execute this app, you have to have some prerequisites:
-* Go and install Tthe GO programming language at https://go.dev
+* Go and install the GO programming language at https://go.dev
 * Install TinyGO: follow this [installation guide](https://tinygo.org/getting-started/install/) to get tinygo installed into your machine
 * Make sur to add the `C:\Program Files\Go\bin` and the `C:\tinygo\bin` to your PATH environment variable
 
