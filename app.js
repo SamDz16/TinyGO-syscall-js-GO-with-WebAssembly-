@@ -1,10 +1,21 @@
 const go = new Go();
 
-WebAssembly.instantiateStreaming(fetch('main.wasm'), go.importObject).then(
+WebAssembly.instantiateStreaming(fetch('/assets/mywasm.wasm'), go.importObject).then(
 	(result) => {
 		go.run(result.instance);
 	}
 );
+
+// const go = new Go(); 
+// go.importObject._jsClearRect
+//          async function fetchAndInstantiate() { 
+//             const response = await fetch("/assets/mywasm.wasm"); 
+//             const buffer = await response.arrayBuffer(); 
+//             const obj = await WebAssembly.instantiate(buffer, go.importObject); 
+//             console.log(obj); 
+//             go.run(obj.instance); 
+//          } 
+// fetchAndInstantiate(); 
 
 // EXEMPLE 1
 
