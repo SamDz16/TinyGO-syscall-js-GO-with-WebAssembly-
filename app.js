@@ -1,21 +1,46 @@
+// if (!WebAssembly.instantiateStreaming) {
+// 	WebAssembly.instantiateStreaming = async (resp, importObject) => {
+// 		const source = await (await resp).arrayBuffer();
+// 		return await WebAssembly.instantiate(source, importObject);
+// 	};
+// }
+
+// const go = new Go();
+// WebAssembly.instantiateStreaming(
+// 	fetch('/assets/main.wasm'),
+// 	go.importObject
+// ).then((result) => {
+// 	go.run(result.instance);
+// });
+
+// const go = new Go();
+
+// WebAssembly.instantiateStreaming(
+// 	fetch('/assets/main.wasm'),
+// 	go.importObject
+// ).then((result) => {
+// 	go.run(result.instance);
+// });
+
+// (async () => {
+// 	const response = await fetch('./main.wasm');
+// 	const buffer = await response.arrayBuffer();
+// 	const module = await WebAssembly.compile(buffer);
+// 	const instance = new WebAssembly.instantiate(module);
+// 	// const result = instance.exports.fibonacci(42);
+// 	console.log(result);
+// })();
+
 const go = new Go();
 
-WebAssembly.instantiateStreaming(fetch('/assets/mywasm.wasm'), go.importObject).then(
-	(result) => {
-		go.run(result.instance);
-	}
-);
-
-// const go = new Go(); 
-// go.importObject._jsClearRect
-//          async function fetchAndInstantiate() { 
-//             const response = await fetch("/assets/mywasm.wasm"); 
-//             const buffer = await response.arrayBuffer(); 
-//             const obj = await WebAssembly.instantiate(buffer, go.importObject); 
-//             console.log(obj); 
-//             go.run(obj.instance); 
-//          } 
-// fetchAndInstantiate(); 
+async function fetchAndInstantiate() {
+	const response = await fetch('/assets/main.wasm');
+	const buffer = await response.arrayBuffer();
+	const obj = await WebAssembly.instantiate(buffer, go.importObject);
+	console.log(obj);
+	go.run(obj.instance);
+}
+fetchAndInstantiate();
 
 // EXEMPLE 1
 
